@@ -43,6 +43,7 @@ class LoginLess_Posting
 			$retvalue = call_user_func_array(array(&$bb_current_user, 'has_cap'), array_merge(array($cap), $args));
 		// not logged in, which is what we're interested in
 		} else {
+return false;
 			// let's whitelist capabilities of an anonymous user
 			switch( $cap ) {
 				case 'write_post' :
